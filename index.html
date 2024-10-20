@@ -5,6 +5,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+
+  <style>
+    figure {
+        display: inline-block; /* Permite que las figuras se muestren una al lado de la otra */
+        margin: 20px; /* Espacio alrededor de cada figura */
+        text-align: center; /* Centra el texto del pie de figura */
+    }
+    img {
+        width: 200px; /* Establece un ancho fijo para las imágenes */
+        height: auto; /* Mantiene la proporción de la imagen */
+        transition: transform 0.3s; /* Suaviza el efecto de transformación */
+    }
+</style>
 </head>
 
 <body>
@@ -31,17 +44,81 @@
     <h2>Actividad 3</h2>
     <p>Ejecuta las siguientes dos líneas de código y comprueba el contenido de la variable var. Interpreta y explica los
       resultados.</p>
-    <p>Lo que sucede en estos ejemplos es que JavaScript no es un lenguaje fuertemente tipado, lo que hace en el primer ejemplo, empieza siendo una string, y al sumarle un número, no lo usa como número sino como string. Esto hace que sea una concatenación. La segunda empieza siendo un número entonces si realiza una suma, hasta que entra la string y se convierte en una string con su respectiva concatenación.</p>
+    <p>Lo que sucede en estos ejemplos es que JavaScript no es un lenguaje fuertemente tipado, lo que hace en el primer
+      ejemplo, empieza siendo una string, y al sumarle un número, no lo usa como número sino como string. Esto hace que
+      sea una concatenación. La segunda empieza siendo un número entonces si realiza una suma, hasta que entra la string
+      y se convierte en una string con su respectiva concatenación.</p>
   </section>
 
   <section id="act4">
     <h2>Actividad 4</h2>
-    <p>El operador typeof permite saber el tipo de una variable. Crea un programa en el que pongas ejemplos de su utilización.</p>
+    <p>El operador typeof permite saber el tipo de una variable. Crea un programa en el que pongas ejemplos de su
+      utilización.</p>
   </section>
 
   <section id="act5">
     <h2>Actividad 5</h2>
     <p>Crea un script con algún ejemplo de cómo se pueden sobrescribir variables y funciones globales.</p>
+    <p>(El script se encuentra en el script.js en el apartado de // Actividad 5)</p>
+  </section>
+
+  <section id="act6">
+    <h2>Actividad 6</h2>
+    <p>JavaScript puede manejar eventos en una página web para conocer, por ejemplo, cuándo el ratón pasa por encima de
+      un elemento. A continuación, se muestra un ejemplo para cada uno de los siguientes eventos.</p>
+
+    <figure>
+      <img src="./src/img/cerrado-removebg-preview.png" alt="gato cerrado"
+        onmouseover="cambiarImagen(this, './src/img/abierto-removebg-preview.png')"
+        onmouseout="cambiarImagen(this, './src/img/cerrado-removebg-preview.png')">
+      <figcaption>onmouseover</figcaption>
+    </figure>
+
+    <figure>
+      <img src="./src/img/cerrado-removebg-preview.png" alt="gato cerrado"
+        onmouseover="cambiarImagen(this, './src/img/abierto-removebg-preview.png')"
+        onmouseout="cambiarImagen(this, './src/img/cerrado-removebg-preview.png')">
+      <figcaption>onmouseout</figcaption>
+    </figure>
+
+    <figure>
+      <img src="./src/img/cerrado-removebg-preview.png" alt="gato cerrado"
+        onfocus="cambiarImagen(this, './src/img/abierto-removebg-preview.png')"
+        onblur="cambiarImagen(this, './src/img/cerrado-removebg-preview.png')" tabindex="0">
+      <figcaption>onblur (Hazme click)</figcaption>
+    </figure>
+  </section>
+
+  <section id="act7">
+    <h2>Actividad 7</h2>
+    <p>Averigua qué resultado darán las siguientes líneas de código.</p>
+  </section>
+
+  <section id="act8">
+    <h2>Actividad 8</h2>
+    <p>Realiza un script que extraiga el mes y año de una fecha concreta.</p>
+    <form id="act8_form">
+      <label for="date">Dame una fecha</label>
+      <input id="date" type="text" value="07/04/2017" pattern="^(?: (?:31 (\/I-I\.) (2:02 [13578] |1 [02]))\1| (?: (2:29130) (\/|-|\.) (2:02 [1,3-9] 11 [0-2])\2)) (?: (2:1[69] | [2-9]\d) ?\d{2})$ | ^ (2:29 (\/|-|\.) 022\3 (?: (?: (2:1 [6- 9] | [2-9]\d)?(?:0 [48] | [2468] [048] | [13579] [26]) | (?: (?:16] [2468] [048] | [3579] [26]) 00)))) $ 1^(?:02 [1-9] |1\d|2 [0-8]) (\/|-|\.) (?: (2:02 [1-9])|(2:1 [0-2]))\4 (?: (2:1 [6-9] | [2-9]\d) ?\d{2})$" title="Introduzca una fecha en formato dd/mm/yyyy"/>
+      <input type="submit">
+    </form>
+  </section>
+
+  <section id="act9">
+    <h2>Actividad 9</h2>
+    <p>Romualdo, que todavía no ha terminado el ciclo de DAW, se pregunta si puede crear el siguiente array.</p>
+  </section>
+
+  <section id="act10">
+    <h2>Actividad 10</h2>
+    <p>Dibujar el rombo</p>
+
+    <form id="act10_form">
+      <label for="lado">Dame el número de lineas</label>
+      <input id="lado" type="number">
+      <input type="submit">
+    </form>
+
   </section>
 
   <script src="script.js"></script>
